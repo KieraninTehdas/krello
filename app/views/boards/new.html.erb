@@ -1,7 +1,6 @@
-<%= turbo_frame_tag "modal" do %>
-  <%= form_with model: @board do |form| %>
-    <%= form.label :name, "Name" %>
-    <%= form.text_field :name %>
-    <%= form.submit %>
-  <% end %>
+<%= form_with model: @board do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
 <% end %>
+
