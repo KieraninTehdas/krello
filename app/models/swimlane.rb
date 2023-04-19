@@ -1,0 +1,2 @@
+class Swimlane < ApplicationRecord
+end
