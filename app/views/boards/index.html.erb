@@ -1,0 +1,8 @@
+<h1>Your Boards</h1>
+<ul>
+  <% @boards.each do |board| %>
+    <%= link_to board.name, board_path %>
+  <% end %>
+</ul>
+
+<%= button_to "New board", new_board_path, method: :get, data: { turbo_frame: "modal" } %>
