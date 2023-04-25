@@ -1,1 +1,15 @@
 <h1><%= @board.name %></h1>
+<div class="swimlane-container">
+  <%= turbo_frame_tag "swimlanes" do %>
+  <% @board.swimlanes.each do |swimlane| %>
+    <div>
+      <%= render partial: "swimlanes/show", locals: {swimlane: swimlane } %>
+    </div>
+  <% end %>
+<% end %>
+  <div>
+    <%= turbo_frame_tag "new_swimlane" do %>
+      <%= button_to "Add another list", new_board_swimlane_path(@board), method: :get %>
+    <% end %>
+  </div>
+</div>

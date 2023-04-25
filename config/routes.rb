@@ -3,7 +3,13 @@
 Rails.application.routes.draw do
   root "boards#index"
 
-  resources :boards, except: [:edit]
+  resources :boards, except: [:edit] do
+    resources :swimlanes, except: [:edit], shallow: true
+  end
+
+  resources :swimlanes, only: [] do
+    resources :cards, shallow: true
+  end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.

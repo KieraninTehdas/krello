@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "swimlane_#{@swimlane.id}_new_card" do %>
+  <%= form_with model: [:swimlane, @card] do |form| %>
+    <%= form.label :title, "Title" %>
+    <%= form.text_field :title%>
+    <%= form.submit %>
+  <% end %>
+<% end %>

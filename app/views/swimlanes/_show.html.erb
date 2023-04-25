@@ -1,0 +1,11 @@
+<span><%= swimlane.name %>
+<ul>
+  <% swimlane.cards.each do |card| %>
+    <li><%= card.title %></li>
+  <% end %>
+  <li>
+    <%= turbo_frame_tag "swimlane_#{swimlane.id}_new_card" do %>
+      <%= button_to "Add a card", new_swimlane_card_path(swimlane), method: :get %>
+    <% end %>
+  </li>
+</ul>
