@@ -1,24 +1,5 @@
-# README
+# Krello
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Kieranintehdasin Trello clone! Built to get a better feel for [Hotwired's Turbo Frames and Turbo Streams](https://turbo.hotwired.dev/)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you're set up with Ruby and Bundler, should just need `bundle install` and `bin/rails s`.
