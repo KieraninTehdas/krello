@@ -2,13 +2,13 @@
 <ul>
   <%= turbo_frame_tag "swimlane_#{swimlane.id}_cards" do %>
     <% swimlane.cards.each do |card| %>
-      <li><%= card.title %></li>
+      <%= render partial: "cards/card", locals: { card: card } %>
     <% end %>
   <% end %>
-  
+
   <li>
     <%= turbo_frame_tag "swimlane_#{swimlane.id}_new_card" do %>
-      <%= button_to "Add a card", new_swimlane_card_path(swimlane), method: :get %>
+      <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
     <% end %>
   </li>
 </ul>

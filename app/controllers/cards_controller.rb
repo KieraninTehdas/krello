@@ -13,7 +13,14 @@ class CardsController < ApplicationController
       swimlane: @swimlane
     )
 
-    @card.save!
+    if @card.save
+      respond_to do |format|
+        format.html { redirect_to board_path(@swimlane.board) }
+        format.turbo_stream
+      end
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private

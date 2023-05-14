@@ -12,11 +12,15 @@ class SwimlanesController < ApplicationController
       name: params[:swimlane][:name],
       board: @board
     )
-    @swimlane.save!
 
-    respond_to do |format|
-      format.html { redirect_to board_path(@board) }
-      format.turbo_stream
+    if @swimlane.save
+
+      respond_to do |format|
+        format.html { redirect_to board_path(@board) }
+        format.turbo_stream
+      end
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

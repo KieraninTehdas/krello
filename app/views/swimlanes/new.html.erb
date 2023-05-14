@@ -1,7 +1,7 @@
 <%= turbo_frame_tag @swimlane do %>
   <%= form_with model: [:board, @swimlane] do |form| %>
     <%= form.label :name, "Name" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, required: true %>
     <%= form.submit %>
   <% end %>
 <% end %>
