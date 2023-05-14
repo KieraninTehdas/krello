@@ -14,7 +14,10 @@ class SwimlanesController < ApplicationController
     )
     @swimlane.save!
 
-    redirect_to board_path(@board)
+    respond_to do |format|
+      format.html { redirect_to board_path(@board) }
+      format.turbo_stream
+    end
   end
 
   private

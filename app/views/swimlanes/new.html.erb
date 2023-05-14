@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "new_swimlane" do %>
+<%= turbo_frame_tag @swimlane do %>
   <%= form_with model: [:board, @swimlane] do |form| %>
     <%= form.label :name, "Name" %>
     <%= form.text_field :name %>
