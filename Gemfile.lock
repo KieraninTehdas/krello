@@ -111,6 +111,9 @@ GEM
     diff-lcs (1.5.0)
     error_highlight (0.5.1)
     erubi (1.12.0)
+    ffi (1.15.5)
+    font-awesome-sass (6.4.0)
+      sassc (~> 2.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -184,6 +187,8 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -220,6 +225,7 @@ DEPENDENCIES
   bootsnap
   debug
   error_highlight (>= 0.4.0)
+  font-awesome-sass (~> 6.4.0)
   importmap-rails
   jbuilder
   puma (>= 5.0)

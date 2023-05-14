@@ -2,7 +2,9 @@
   <%= form_with model: [:board, @swimlane] do |form| %>
     <%= form.label :name, "Name" %>
     <%= form.text_field :name, required: true %>
-    <%= form.submit %>
+    <%= form.submit "Add List" %>
+
+    <i class="fa-solid fa-x"></i>
   <% end %>
 <% end %>
 
