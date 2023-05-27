@@ -1,2 +1,2 @@
-<%= turbo_stream.append "swimlane_#{@swimlane.id}_cards", @card%>
+<%= turbo_stream.before "swimlane_#{@swimlane.id}_last_card", @card %>
 <%= turbo_stream.update "swimlane_#{@swimlane.id}_new_card", partial: "swimlanes/add_card", locals: { swimlane: @swimlane } %>

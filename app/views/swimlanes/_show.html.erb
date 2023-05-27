@@ -1,14 +1,12 @@
-<span><%= swimlane.name %>
-<ul>
-  <%= turbo_frame_tag "swimlane_#{swimlane.id}_cards" do %>
+<div>
+  <span><%= swimlane.name %></span>
+  <ul>
     <% swimlane.cards.each do |card| %>
       <%= render partial: "cards/card", locals: { card: card } %>
     <% end %>
-  <% end %>
 
-  <li>
-    <%= turbo_frame_tag "swimlane_#{swimlane.id}_new_card" do %>
-      <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
-    <% end %>
-  </li>
-</ul>
+    <li id=<%= "swimlane_#{swimlane.id}_last_card" %>>
+        <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
+    </li>
+  </ul>
+</div>
