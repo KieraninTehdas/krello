@@ -1,5 +1,5 @@
 <span>
-  <%= turbo_frame_tag "new_swimlane" do %>
+  <%= turbo_frame_tag new_swimlane_id do %>
     <%= link_to new_board_swimlane_path(@board), method: :get do %>
       <i class="fa-solid fa-plus"></i> Add another list
     <% end %>

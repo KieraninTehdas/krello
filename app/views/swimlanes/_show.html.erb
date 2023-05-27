@@ -5,7 +5,7 @@
       <%= render partial: "cards/card", locals: { card: card } %>
     <% end %>
 
-    <li id=<%= "swimlane_#{swimlane.id}_last_card" %>>
+    <li id=<%= last_card_id(swimlane) %>>
         <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
     </li>
   </ul>

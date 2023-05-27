@@ -4,7 +4,7 @@
     <%= render partial: "swimlanes/show", locals: {swimlane: swimlane } %>
   <% end %>
 
-  <div id="last_swimlane">
+  <div id=<%= last_swimlane_id %>>
     <%= render "add_swimlane" %>
   </div>
 </div>

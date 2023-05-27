@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "swimlane_#{swimlane.id}_new_card" do %>
+<%= turbo_frame_tag new_card_id(swimlane) do %>
   <%= link_to new_swimlane_card_path(swimlane), method: :get do %>
     <i class="fa-solid fa-plus"></i> Add a card
   <% end %>
