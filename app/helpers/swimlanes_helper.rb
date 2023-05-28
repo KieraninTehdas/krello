@@ -8,4 +8,8 @@ module SwimlanesHelper
   def new_swimlane_id
     "new_swimlane"
   end
+
+  def swimlane_cards_id(swimlane)
+    "swimlane_#{swimlane.id}_cards"
+  end
 end

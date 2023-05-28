@@ -1,12 +1,14 @@
-<div>
-  <span><%= swimlane.name %></span>
-  <ul>
+<div class="swimlane">
+  <div class="swimlane__title">
+    <span><%= swimlane.name %></span>
+  </div>
+  <div id=<%= swimlane_cards_id(swimlane) %> class="card-container">
     <% swimlane.cards.each do |card| %>
       <%= render partial: "cards/card", locals: { card: card } %>
     <% end %>
+  </div>
 
-    <li id=<%= last_card_id(swimlane) %>>
-        <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
-    </li>
-  </ul>
+  <div id=<%= last_card_id(swimlane) %> class="swimlane__add-card">
+    <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
+  </div>
 </div>

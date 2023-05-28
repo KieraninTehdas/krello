@@ -27,16 +27,57 @@
 }
 
 .swimlane-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.swimlanes {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   overflow-x: auto;
 }
+
+.swimlane {
+  flex: 0 0 20rem;
+  background-color: #ededf0;
+  margin: 0px 6px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  :first-child {
+    margin-left: 12px;
+  }
+
+  .swimlane &__title {
+    height: 3.5rem;
+    margin-left: 0px;
+  }
+
+  .swimlane &__add-card {
+    height: 3.5rem;
+    margin-left: 0px;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  gap: 7px;
+  padding: 1px 4px 0px;
+}
+
+.swimlane .card {
+  display: block;
+  flex: 0 1 4.5rem;
+  margin-left: 0px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  max-width: 20rem;
+  width: 100%;
+}
+
