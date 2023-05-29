@@ -1,6 +1,6 @@
 <div class="swimlane">
   <div class="swimlane__title">
-    <span><%= swimlane.name %></span>
+    <h2 class="swimlane__title-text"><%= swimlane.name %></h2>
   </div>
   <div id=<%= swimlane_cards_id(swimlane) %> class="card-container">
     <% swimlane.cards.each do |card| %>
