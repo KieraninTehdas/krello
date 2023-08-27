@@ -2,7 +2,11 @@
   <div class="swimlane__title">
     <h2 class="swimlane__title-text"><%= swimlane.name %></h2>
   </div>
-  <div id=<%= swimlane_cards_id(swimlane) %> class="card-container" data-action="drop->draggable#drop">
+  <div 
+      id=<%= swimlane_cards_id(swimlane) %> 
+      class="card-container" 
+      data-controller="draggable" 
+      data-action="drop->draggable#drop dragover->draggable#dragOver dragenter->draggable#dragEnter">
     <% swimlane.cards.each do |card| %>
       <%= render partial: "cards/card", locals: { card: card } %>
     <% end %>
