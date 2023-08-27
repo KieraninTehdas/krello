@@ -8,7 +8,7 @@
     <% end %>
   </div>
 
-  <div id=<%= last_card_id(swimlane) %> class="swimlane__add-card">
+  <div id=<%= new_card_id(swimlane) %> class="swimlane__add-card">
     <%= render partial: "swimlanes/add_card", locals: { swimlane: swimlane } %>
   </div>
 </div>

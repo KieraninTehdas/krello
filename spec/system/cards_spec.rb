@@ -6,7 +6,7 @@ RSpec.describe "Cards", type: :system do
   let!(:swimlane) { create(:swimlane) }
   let(:board) { swimlane.board }
 
-  scenario "creating a new swimlane" do
+  scenario "creating a new card" do
     visit board_path(board)
 
     expect(page).to have_content board.name

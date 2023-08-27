@@ -12,7 +12,16 @@
     <%= turbo_frame_tag "modal" %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <div class="surface">
+    <body>
+      <div class="nav-container">
+        <nav>
+          <%= link_to "Krello", root_path %>
+        </nav>
+      </div>
+      <div class="content-container">
+        <%= yield %>
+      </div>
+    </body>
+  </div>
 </html>

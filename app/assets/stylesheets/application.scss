@@ -15,6 +15,7 @@
  */
 @import "font-awesome";
 @import "swimlane";
+@import "card";
 
 #modal {
   position: absolute;
@@ -48,8 +49,3 @@ nav {
 body {
   margin: 0;
 }
-
-.content-container {
-  padding-left: 16px;
-}
-
