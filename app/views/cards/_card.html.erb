@@ -1,3 +1,8 @@
-<div class="card" draggable=true>
+<div 
+  class="card"
+  draggable=true 
+  data-card-id=<%= card.id %> 
+  data-controller="draggable"
+  data-action="dragstart->draggable#dragStart dragover->draggable#dragOver dragenter->draggable#dragEnter dragend->draggable#dragEnd">
   <span><%= card.title %></span>
 </div>
